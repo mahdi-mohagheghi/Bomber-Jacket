@@ -6,12 +6,12 @@ plugins {
 
 android {
     namespace = "mohagheghi.mahdi.bomberjacket"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "mohagheghi.mahdi.bomberjacket"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
