@@ -1,4 +1,4 @@
-package mohagheghi.mahdi.bomberjacket
+package mohagheghi.mahdi.bomberjacket.presentation.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -11,7 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import mohagheghi.mahdi.bomberjacket.ui.theme.BomberJacketTheme
+import mohagheghi.mahdi.bomberjacket.presentation.ui.theme.BomberJacketTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

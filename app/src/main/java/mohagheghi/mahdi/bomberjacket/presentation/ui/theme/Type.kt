@@ -1,4 +1,4 @@
-package mohagheghi.mahdi.bomberjacket.ui.theme
+package mohagheghi.mahdi.bomberjacket.presentation.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

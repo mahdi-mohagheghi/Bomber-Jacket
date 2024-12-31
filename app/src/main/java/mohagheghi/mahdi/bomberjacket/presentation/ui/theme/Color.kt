@@ -1,4 +1,4 @@
-package mohagheghi.mahdi.bomberjacket.ui.theme
+package mohagheghi.mahdi.bomberjacket.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

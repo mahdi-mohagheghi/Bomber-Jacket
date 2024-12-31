@@ -1,4 +1,4 @@
-package mohagheghi.mahdi.bomberjacket.ui.theme
+package mohagheghi.mahdi.bomberjacket.presentation.ui.theme
 
 import android.app.Activity
 import android.os.Build
