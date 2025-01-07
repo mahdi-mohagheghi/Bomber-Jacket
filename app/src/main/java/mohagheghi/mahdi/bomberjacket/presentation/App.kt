@@ -2,6 +2,7 @@ package mohagheghi.mahdi.bomberjacket.presentation
 
 import android.app.Application
 import mohagheghi.mahdi.bomberjacket.data.di.localModule
+import mohagheghi.mahdi.bomberjacket.data.di.repoModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.GlobalContext.startKoin
@@ -19,7 +20,7 @@ class App : Application() {
         startKoin {
             androidLogger(level = Level.ERROR)
             androidContext(this@App)
-            modules(localModule)
+            modules(localModule, repoModule)
         }
     }
 }
