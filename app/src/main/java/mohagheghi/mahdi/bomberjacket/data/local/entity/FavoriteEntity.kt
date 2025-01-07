@@ -4,8 +4,8 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity
-data class Favorite(
+@Entity(tableName = "favorite")
+data class FavoriteEntity(
     @PrimaryKey val productId: Long,
     @ColumnInfo(name = "isFav") val isFav: Boolean
 )

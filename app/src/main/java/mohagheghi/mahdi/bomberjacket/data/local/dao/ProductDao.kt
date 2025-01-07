@@ -12,7 +12,7 @@ interface ProductDao {
 
     @Transaction
     @Query(
-        """SELECT p.id, p.mainImage, i.url AS mainImageUrl, IFNULL(f.isFav, 0) AS isFav
+        """SELECT p.id, p.mainImage, i.url AS mainImageUrl, IFNULL(f.isFav, 0) AS isFav, p.categoryId
         FROM product p
         LEFT JOIN image i ON p.mainImage = i.id
         LEFT JOIN favorite f ON p.id = f.productId
@@ -23,12 +23,12 @@ interface ProductDao {
 
     @Transaction
     @Query(
-        """SELECT p.*, i.url AS mainImageUrl, IFNULL(f.isFav, 0) AS isFav
+        """SELECT p.*, i.url AS mainImageUrl
         FROM product p
         LEFT JOIN image i ON p.mainImage = i.id
         LEFT JOIN favorite f ON p.id = f.productId
         WHERE p.id = :productId
         """
     )
-    fun getProductById(productId: Long): Flow<List<ProductDetail>>
+    fun getProductById(productId: Long): Flow<ProductDetail>
 }

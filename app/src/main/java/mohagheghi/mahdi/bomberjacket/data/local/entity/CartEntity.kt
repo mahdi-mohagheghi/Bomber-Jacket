@@ -4,8 +4,8 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity
-data class Cart(
+@Entity(tableName = "cart")
+data class CartEntity(
     @PrimaryKey val id: Long,
     @ColumnInfo(name = "productId") val productId: Long,
     @ColumnInfo(name = "colorId") val colorId: Long,

@@ -6,16 +6,17 @@ import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
 
 @Entity(
+    tableName = "product",
     foreignKeys = [
         ForeignKey(
-            entity = Image::class,
+            entity = ImageEntity::class,
             parentColumns = ["id"],
             childColumns = ["mainImage"],
             onDelete = ForeignKey.CASCADE
         )
     ]
 )
-data class Product(
+data class ProductEntity(
     @PrimaryKey val id: Long,
     @ColumnInfo(name = "title") val title: String,
     @ColumnInfo(name = "desc") val desc: String?,

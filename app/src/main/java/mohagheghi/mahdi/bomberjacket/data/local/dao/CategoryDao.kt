@@ -3,11 +3,11 @@ package mohagheghi.mahdi.bomberjacket.data.local.dao
 import androidx.room.Dao
 import androidx.room.Query
 import kotlinx.coroutines.flow.Flow
-import mohagheghi.mahdi.bomberjacket.data.local.entity.Category
+import mohagheghi.mahdi.bomberjacket.data.local.entity.CategoryEntity
 
 @Dao
 interface CategoryDao {
 
     @Query("select * from category")
-    fun getCategories(): Flow<List<Category>>
+    fun getCategories(): Flow<List<CategoryEntity>>
 }

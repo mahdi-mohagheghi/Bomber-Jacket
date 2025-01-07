@@ -4,8 +4,8 @@ import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity
-data class Image(
-    @PrimaryKey val id: Long,
-    @ColumnInfo(name = "url") val url: String
+@Entity(tableName = "size")
+data class SizeEntity(
+    @PrimaryKey val id: Int,
+    @ColumnInfo(name = "title") val title: String
 )

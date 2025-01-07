@@ -5,7 +5,7 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
 import kotlinx.coroutines.flow.Flow
-import mohagheghi.mahdi.bomberjacket.data.local.entity.Cart
+import mohagheghi.mahdi.bomberjacket.data.local.entity.CartEntity
 import mohagheghi.mahdi.bomberjacket.data.local.model.CartDetail
 
 @Dao
@@ -37,8 +37,8 @@ interface CartDao {
     fun getProductCountInCart(productId: Long, colorId: Long, sizeId: Int): Int
 
     @Insert
-    suspend fun addToCart(cart: Cart)
+    suspend fun addToCart(cart: CartEntity)
 
     @Delete
-    suspend fun removeFromCart(cart: Cart)
+    suspend fun removeFromCart(cart: CartEntity)
 }
