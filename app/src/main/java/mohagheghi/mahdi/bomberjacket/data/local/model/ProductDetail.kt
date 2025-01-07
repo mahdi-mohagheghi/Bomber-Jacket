@@ -8,5 +8,5 @@ data class ProductDetail(
     val mainImageUrl: String,
     val imagesUrls: List<String>?,
     val colors: List<Long>?,
-    val sizes: List<Long>?
+    val sizes: List<Int>?
 )
