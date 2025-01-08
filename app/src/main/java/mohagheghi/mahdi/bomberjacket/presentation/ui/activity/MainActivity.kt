@@ -1,4 +1,4 @@
-package mohagheghi.mahdi.bomberjacket.presentation.ui
+package mohagheghi.mahdi.bomberjacket.presentation.ui.activity
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
