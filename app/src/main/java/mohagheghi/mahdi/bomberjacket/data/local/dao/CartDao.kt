@@ -6,7 +6,7 @@ import androidx.room.Insert
 import androidx.room.Query
 import kotlinx.coroutines.flow.Flow
 import mohagheghi.mahdi.bomberjacket.data.local.entity.CartEntity
-import mohagheghi.mahdi.bomberjacket.data.local.model.CartDetail
+import mohagheghi.mahdi.bomberjacket.data.local.model.CartItem
 
 @Dao
 interface CartDao {
@@ -31,10 +31,10 @@ interface CartDao {
         GROUP BY c.productId, c.colorId, c.sizeId
         """
     )
-    fun getCartItems(): Flow<List<CartDetail>>
+    fun getCartItems(): Flow<List<CartItem>>
 
     @Query("SELECT COUNT(*) AS count FROM cart GROUP BY :productId, :colorId, :sizeId")
-    fun getProductCountInCart(productId: Long, colorId: Long, sizeId: Int): Int
+    fun getProductCountInCart(productId: Long, colorId: Long, sizeId: Int): Flow<Int>
 
     @Insert
     suspend fun addToCart(cart: CartEntity)

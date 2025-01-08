@@ -1,6 +1,6 @@
 package mohagheghi.mahdi.bomberjacket.data.local.model
 
-data class CartDetail(
+data class CartItem(
     val id: Long,
     val productId: Long,
     val productImageUrl: String,
